@@ -1,0 +1,37 @@
+﻿<!-- CS290 Project -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>CS290 Project</title>
+    <link rel="stylesheet" href="home.css" type="text/css">
+</head>
+<body>
+    <!-- horizontal navigation menu -->
+    <div class="navMenu">
+        <a href="home.html">Home</a>
+        <a href="us.html">United States</a>
+        <a class="active" href="#world">World</a>
+        <a href="resources.html">Additional Resources</a>
+    </div>
+    <h1>Weather Search</h1>
+    <h3>Input</h3>
+    <form>
+        <fieldset>
+            <label>City Name <input type="text" name="City" id="City"></label>  <!-- input city -->
+            <b>&nbspOR&nbsp</b>
+            <label>Zip Code <input type="number" name="Zip" id="Zip"></label>  <!-- input zip code -->
+            <b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b>
+            <label>Country <input type="text" name="Country" id="Country"></label>  <!-- input text -->
+            <input type="submit" name="submit" id="inputSubmit">  <!-- submit -->
+        </fieldset>
+    </form>
+    <div>
+        <h3>Weather Result</h3>
+    </div>
+    <div id="Weather"></div>  <!-- div for displaying results -->
+    <script src="get.js"></script>
+</body>
+</html>
