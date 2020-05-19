@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8" />
     <title>CS290 Project</title>
-    <link rel="stylesheet" href="home.css" type="text/css">
+    <link rel="stylesheet" href="us.css" type="text/css">
 </head>
 <body>
     <!-- horizontal navigation menu -->
@@ -16,22 +16,131 @@
         <a href="world.html">World</a>
         <a href="resources.html">Additional Resources</a>
     </div>
-    <h1>Weather Search</h1>
-    <h3>Input</h3>
+    <h1>COVID-19 Deaths by State and Demographic</h1>
+    <h3>Select</h3>
     <form>
         <fieldset>
-            <label>City Name <input type="text" name="City" id="City"></label>  <!-- input city -->
-            <b>&nbspOR&nbsp</b>
-            <label>Zip Code <input type="number" name="Zip" id="Zip"></label>  <!-- input zip code -->
-            <b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b>
-            <label>Country <input type="text" name="Country" id="Country"></label>  <!-- input text -->
+            <label for="State">State:</label>
+            <select id="State" name="State">
+                <option value="United States">United States</option>
+                <option value="Alabama">Alabama</option>
+                <option value="Alaska">Alaska</option>
+                <option value="Arizona">Arizona</option>
+                <option value="Arkansas">Arkansas</option>
+                <option value="California">California</option>
+                <option value="Colorado">Colorado</option>
+                <option value="Connecticut">Connecticut</option>
+                <option value="Delaware">Delaware</option>
+                <option value="District of Columbia">District of Columbia</option>
+                <option value="Florida">Florida</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Hawaii">Hawaii</option>
+                <option value="Idaho">Idaho</option>
+                <option value="Illinois">Illinois</option>
+                <option value="Indiana">Indiana</option>
+                <option value="Iowa">Iowa</option>
+                <option value="Kansas">Kansas</option>
+                <option value="Kentucky">Kentucky</option>
+                <option value="Louisiana">Louisiana</option>
+                <option value="Maine">Maine</option>
+                <option value="Maryland">Maryland</option>
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="Michigan">Michigan</option>
+                <option value="Minnesota">Minnesota</option>
+                <option value="Mississippi">Mississippi</option>
+                <option value="Missouri">Missouri</option>
+                <option value="Montana">Montana</option>
+                <option value="Nebraska">Nebraska</option>
+                <option value="Nevada">Nevada</option>
+                <option value="New Hampshire">New Hampshire</option>
+                <option value="New Jersey">New Jersey</option>
+                <option value="New Mexico">New Mexico</option>
+                <option value="New York">New York</option>
+                <option value="North Carolina">North Carolina</option>
+                <option value="North Dakota">North Dakota</option>
+                <option value="Ohio">Ohio</option>
+                <option value="Oklahoma">Oklahoma</option>
+                <option value="Oregon">Oregon</option>
+                <option value="Pennsylvania">Pennsylvania</option>
+                <option value="Rhode Island">Rhode Island</option>
+                <option value="South Carolina">South Carolina</option>
+                <option value="South Dakota">South Dakota</option>
+                <option value="Tennessee">Tennessee</option>
+                <option value="Texas">Texas</option>
+                <option value="Utah">Utah</option>
+                <option value="Vermont">Vermont</option>
+                <option value="Virginia">Virginia</option>
+                <option value="Washington">Washington</option>
+                <option value="West Virginia">West Virginia</option>
+                <option value="Wisconsin">Wisconsin</option>
+                <option value="Wyoming">Wyoming</option>
+            </select>
+            <b>&nbsp&nbsp&nbsp&nbsp&nbsp</b>
+            <label for="Sex">Sex:</label>
+            <select id="Sex" name="Sex">
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+            </select>
+            <b>&nbsp&nbsp&nbsp&nbsp&nbsp</b>
+            <label for="Age">Age Group:</label>
+            <select id="Age" name="Age">
+                <option value="Under 1 year">Under 1 year</option>
+                <option value="1-4 years">1-4 years</option>
+                <option value="5-14 years">5-14 years</option>
+                <option value="15-24 years">15-24 years</option>
+                <option value="25-34 years">25-34 years</option>
+                <option value="35-44 years">35-44 years</option>
+                <option value="45-54 years">45-54 years</option>
+                <option value="55-64 years">55-64 years</option>
+                <option value="65-74 years">65-74 years</option>
+                <option value="75-84 years">75-84 years</option>
+                <option value="85 years and over">85 years and over</option>
+            </select>
+            <b>&nbsp&nbsp</b>
             <input type="submit" name="submit" id="inputSubmit">  <!-- submit -->
+            <b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b>
+            <input type="button" id="download" value="Download all data for this State">
         </fieldset>
     </form>
     <div>
-        <h3>Weather Result</h3>
+        <h3>Results</h3>
     </div>
-    <div id="Weather"></div>  <!-- div for displaying results -->
-    <script src="get.js"></script>
+    <div id="Results">
+        <!-- div for displaying results -->
+        <table>
+            <!-- create table -->
+            <caption></caption>
+            <thead>
+                <!-- create header section -->
+                <tr>
+                    <th>
+                    <th> COVID-19
+                    <th> Influenza
+                    <th> Pneumonia
+                    <th> Pneumonia and COVID-19
+                    <th> Pneumonia, Influenza, or COVID-19
+            <tbody>
+                <tr>
+                    <!-- create row of  -->
+                    <th> Deaths
+                    <td id="c_death">
+                    <td id="i_death">
+                    <td id="p_death">
+                    <td id="p_c_death">
+                    <td id="p_i_c_death">
+                <tr>
+                    <td colspan="1">Data as of:</td> <!-- add footer -->
+                    <td colspan="5" id="date"></td> <!-- add footer -->
+                <tr>
+                    <td colspan="1">Start Week:</td> <!-- add footer -->
+                    <td colspan="5" id="start"></td> <!-- add footer -->
+                <tr>
+                    <td colspan="1">End Week:</td> <!-- add footer -->
+                    <td colspan="5" id="end"></td> <!-- add footer -->
+        </table>
+    </div>
+    <h5 id="note"></h5>
+    <h5>Results from Data.CDC.gov</h5>
+    <script src="us.js"></script>
 </body>
 </html>

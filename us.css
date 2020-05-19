@@ -27,3 +27,8 @@
   background-color: #4CAF50;
   color: white;
 }
+
+/*style table*/
+table, th, td { /* format table border */
+    border-style: solid;
+}
