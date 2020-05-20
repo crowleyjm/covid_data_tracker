@@ -61,6 +61,7 @@ function bindButtons(){
         document.getElementById("date").textContent = obj.data_as_of;
         document.getElementById("start").textContent = obj.start_week;
         document.getElementById("end").textContent = obj.end_week;
+        document.getElementById("download").value = "Download data for " + obj.state;
         console.log(obj.footnote)
         if (typeof obj.footnote !== "undefined") {
         document.getElementById("note").textContent = "*Note: " + obj.footnote;
@@ -87,7 +88,6 @@ function bindButtons(){
 
   function download(filename, text) {
     var element = document.createElement('a');
-    console.log(text)
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(text)));
     element.setAttribute('download', filename);
 
