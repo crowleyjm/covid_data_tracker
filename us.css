@@ -34,11 +34,12 @@
 table, th, td { /* format table border */
     border-style: solid;
     border-width: 2px;
+    border-color: black;
 }
 
 fieldset {
     background-color: #fb9a5d;
     border-style: inset;
     border-color: black;
-    border-width: 4px;
+    border-width: 2px;
 }

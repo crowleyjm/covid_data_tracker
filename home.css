@@ -148,3 +148,7 @@ div.transmission {
     padding: 20px;
     overflow: scroll;
 }
+
+div.map {
+    margin-right: 50px;
+}

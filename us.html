@@ -107,40 +107,45 @@
     </div>
     <div id="Results">
         <!-- div for displaying results -->
-        <table>
-            <!-- create table -->
-            <caption></caption>
-            <thead>
-                <!-- create header section -->
-                <tr>
-                    <th>
-                    <th> COVID-19
-                    <th> Influenza
-                    <th> Pneumonia
-                    <th> Pneumonia and COVID-19
-                    <th> Pneumonia, Influenza, or COVID-19
-            <tbody>
-                <tr>
-                    <!-- create row of  -->
-                    <th> Deaths
-                    <td id="c_death">
-                    <td id="i_death">
-                    <td id="p_death">
-                    <td id="p_c_death">
-                    <td id="p_i_c_death">
-                <tr>
-                    <td colspan="1">Data as of:</td> <!-- add footer -->
-                    <td colspan="5" id="date"></td> <!-- add footer -->
-                <tr>
-                    <td colspan="1">Start Week:</td> <!-- add footer -->
-                    <td colspan="5" id="start"></td> <!-- add footer -->
-                <tr>
-                    <td colspan="1">End Week:</td> <!-- add footer -->
-                    <td colspan="5" id="end"></td> <!-- add footer -->
-        </table>
+        <div style="float:left">
+            <table>
+                <!-- create table -->
+                <caption></caption>
+                <thead>
+                    <!-- create header section -->
+                    <tr>
+                        <th>
+                        <th> COVID-19
+                        <th> Influenza
+                        <th> Pneumonia
+                        <th> Pneumonia and COVID-19
+                        <th> Pneumonia, Influenza, or COVID-19
+                <tbody>
+                    <tr>
+                        <!-- create row of  -->
+                        <th> Deaths
+                        <td id="c_death">
+                        <td id="i_death">
+                        <td id="p_death">
+                        <td id="p_c_death">
+                        <td id="p_i_c_death">
+                    <tr>
+                        <td colspan="1">Data as of:</td> <!-- add footer -->
+                        <td colspan="5" id="date"></td> <!-- add footer -->
+                    <tr>
+                        <td colspan="1">Start Week:</td> <!-- add footer -->
+                        <td colspan="5" id="start"></td> <!-- add footer -->
+                    <tr>
+                        <td colspan="1">End Week:</td> <!-- add footer -->
+                        <td colspan="5" id="end"></td> <!-- add footer -->
+            </table>
+            <h5 id="note"></h5>
+            <h5>Data from Data.CDC.gov</h5>
+        </div>
+        <div class="map" style="float:right; margin-right:50px">
+            <img src="wikimedia_Blank_US_Map_(states_only).svg" width:"500">
+        </div>
     </div>
-    <h5 id="note"></h5>
-    <h5>Data from Data.CDC.gov</h5>
     <script src="us.js"></script>
 </body>
 </html>
