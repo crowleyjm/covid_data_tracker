@@ -34,7 +34,7 @@ function bindButtons(){
         "data": {
         "labels": loc,
         "datasets": [{
-        "label": "Total Deaths by Country as of " + response.Date,
+        "label": "Total COVID-19 Deaths by Country as of " + response.Date,
         "data": tot,
         "fill": false,
         "backgroundColor": colors,
