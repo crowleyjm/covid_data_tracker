@@ -4,8 +4,6 @@
 .navMenu {
   background-color: #333;
   overflow: hidden;
-  border-style: solid;
-  border-width:2px;
 }
 
 /* Style the links inside the navigation bar */
@@ -39,7 +37,4 @@ table, th, td { /* format table border */
 
 fieldset {
     background-color: #fb9a5d;
-    border-style: inset;
-    border-color: black;
-    border-width: 2px;
 }

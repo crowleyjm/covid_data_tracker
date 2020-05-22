@@ -5,7 +5,16 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>CS290 Project</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" href="world.css" type="text/css">
 </head>
 <body>
@@ -14,24 +23,22 @@
         <a href="home.html">Home</a>
         <a href="us.html">United States</a>
         <a class="active" href="#world">World</a>
-        <a href="resources.html">Additional Resources</a>
+        <a href="resources.html">Resources</a>
     </div>
-    <h1>Weather Search</h1>
-    <h3>Input</h3>
+    <h1>COVID-19 Deaths</h1>
     <form>
         <fieldset>
-            <label>City Name <input type="text" name="City" id="City"></label>  <!-- input city -->
-            <b>&nbspOR&nbsp</b>
-            <label>Zip Code <input type="number" name="Zip" id="Zip"></label>  <!-- input zip code -->
-            <b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b>
-            <label>Country <input type="text" name="Country" id="Country"></label>  <!-- input text -->
-            <input type="submit" name="submit" id="inputSubmit">  <!-- submit -->
+            <label>Click to display current world results&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" name="submit" id="inputSubmit", value="Load"></label> <!-- submit -->
+            <b>&nbsp&nbsp&nbsp&nbsp&nbsp</b>
+            <input type="button" id="download" value="Load results first to download">
         </fieldset>
     </form>
-    <div>
-        <h3>Weather Result</h3>
-    </div>
+    <canvas id="horizontalBar" style="max-width: 5000px; height: 10000px"></canvas>
     <div id="Weather"></div>  <!-- div for displaying results -->
-    <script src="get.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js"></script>
+    <script src="world.js"></script>
 </body>
 </html>

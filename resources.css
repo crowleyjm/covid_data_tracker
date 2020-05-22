@@ -4,8 +4,6 @@
 .navMenu {
   background-color: #333;
   overflow: hidden;
-  border-style: solid;
-  border-width:2px;
 }
 
 /* Style the links inside the navigation bar */
@@ -28,4 +26,11 @@
 .navMenu a.active {
   background-color: #b53334;
   color: white;
+}
+
+div.resources {
+    height: 215px;
+    background-color: #fb9a5d;
+    padding: 20px;
+    overflow: scroll;
 }

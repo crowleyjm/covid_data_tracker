@@ -1,4 +1,4 @@
-<!-- CS290 Project -->
+﻿<!-- CS290 Project -->
 
 <!DOCTYPE html>
 
@@ -6,7 +6,8 @@
 <head>
     <meta charset="utf-8" />
     <title>CS290 Project</title>
-    <link rel="stylesheet" href="home.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="resources.css" type="text/css">
 </head>
 <body>
     <!-- horizontal navigation menu -->
@@ -14,7 +15,76 @@
         <a href="home.html">Home</a>
         <a href="us.html">United States</a>
         <a href="world.html">World</a>
-        <a class="active" href="#resources">Additional Resources</a>
+        <a class="active" href="#resources">Resources</a>
     </div>
+    <h1>COVID-19 Survey</h1>
+    <h3>Please fill out this short survey on your experience during the pandemic</h3>
+    <form>
+        <fieldset>
+            <label>Do you wear a mask while entering public spaces like grocery stores?</label>
+            <label>Yes<input type="checkbox" name="mask" id="mask"></label>
+            <br>
+            <br>
+            <label>How many days a week on average do you enter a public space? <input type="number" name="days" id="days"></label>
+            <br>
+            <br>
+            <label>What date did you start quarantine? <input type="date" name="date" id="date"></label>
+            <br>
+            <br>
+            <label>What country do you live in? <input type="text" name="country" id="country"></label>
+            <br>
+            <br>
+            <label>If you live in the United States, which state do you live in? <input type="text" name="state" id="state"></label>
+            <br>
+            <br>
+            <label>Have you recently experienced any of the following symptoms?</label>
+            <br>
+            <label>Cough<input type="radio" name="cough" id="cough"></label>
+            <br>
+            <label>Shortness of breath or difficulty breathing<input type="radio" name="breath" id="breath"></label>
+            <br>
+            <label>Fever<input type="radio" name="fever" id="fever"></label>
+            <br>
+            <label>Chills<input type="radio" name="chills" id="chills"></label>
+            <br>
+            <label>Muscle pain<input type="radio" name="pain" id="pain"></label>
+            <br>
+            <label>Sore throat<input type="radio" name="sore" id="sore"></label>
+            <br>
+            <label>New loss of taste of smell<input type="radio" name="smell" id="smell"></label>
+            <br>
+            <br>
+            <label>Enter your email if you would like to receive email updates for your location. <input type="email" name="email" id="email"></label>  <!-- input email -->
+            <br>
+            <br>
+            <input type="submit" name="submit" id="inputSubmit">  <!-- submit -->
+            <br>
+            <br>
+            <h4 id="sentPost"></h4>
+        </fieldset>
+    </form>
+    <div class="resources">
+        <h1>Additional Resources</h1>
+        <h3>United States</h3>
+        <a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html">Centers for Disease Control and Prevention (CDC.gov)</a>
+        <h3>World</h3>
+        <a href="https://covid19.who.int/">World Health Organization (WHO.int)</a>
+        <br>
+        <br>
+        <a href="https://coronavirus.jhu.edu/map.html">Johns Hopkins University of Medicine (jhu.edu)</a>
+        <br>
+        <br>
+        <a href="https://www.ecdc.europa.eu/en/geographical-distribution-2019-ncov-cases">European Centre for Disease Prevention and Control (ecdc.europa.eu)</a>
+        <br>
+        <br>
+        <a href="https://africacdc.org/covid-19/">​Africa CDC (africacdc.org)</a>
+        <br>
+        <br>
+        <a href="https://www.mohfw.gov.in/">​Ministry of Health and Family Welfare Government of India (mohfw.gov.in)</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="resources.js"></script>
 </body>
 </html>

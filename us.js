@@ -1,4 +1,4 @@
-//Activity 5: Ajax Interactions: GET
+//CS290 Project
 
 document.addEventListener("DOMContentLoaded", bindButtons);  //listener for DOM content loaded
 
@@ -61,7 +61,7 @@ function bindButtons(){
         document.getElementById("date").textContent = obj.data_as_of;
         document.getElementById("start").textContent = obj.start_week;
         document.getElementById("end").textContent = obj.end_week;
-        document.getElementById("download").value = "Download data for " + obj.state;
+        document.getElementById("download").value = "Download all data for " + obj.state;
         console.log(obj.footnote)
         if (typeof obj.footnote !== "undefined") {
         document.getElementById("note").textContent = "*Note: " + obj.footnote;
