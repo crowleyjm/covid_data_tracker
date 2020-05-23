@@ -31,6 +31,16 @@
 div.resources {
     height: 215px;
     background-color: #fb9a5d;
-    padding: 20px;
     overflow: scroll;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
+
+h1, h3, form {
+    margin-left: 20px
+}
+
+div.resources a{
+    margin-left: 20px
+}
+

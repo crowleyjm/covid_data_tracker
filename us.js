@@ -61,35 +61,20 @@ function bindButtons(){
         document.getElementById("end").textContent = obj.end_week;
         document.getElementById("download").value = "Download all data for " + obj.state;
 
-        if (typeof obj.footnote !== "undefined") {
+        if (typeof obj.footnote !== "undefined" && (typeof obj.covid_19_deaths === "undefined" || 
+        typeof obj.influenza_deaths === "undefined" || typeof obj.pneumonia_deaths === "undefined" || 
+        typeof obj.pneumonia_and_covid_19_deaths === "undefined" || typeof obj.pneumonia_influenza_or_covid === "undefined")) {
         document.getElementById("note").textContent = "*Note: " + obj.footnote;
 		}
         else {
-        document.getElementById("note").textContent = obj.footnote
+        document.getElementById("note").textContent = ""
 		}
       } else {
         console.log("Error in network request: " + req.statusText);
       }
 
-    var rssUrl = "https://tools.cdc.gov/api/v2/resources/media/404952.rss";  //construct url
-    
-    req.open("GET", rssUrl, true);  //construct url
-
-    req.addEventListener('load',function(){  //asynchronous load
-      if(req.status >= 200 && req.status < 400){
-        let doc = req.responseText;
-        console.log(doc);
-        doc.querySelectorAll('item').forEach((item) => {
-        rss.textContent = item.querySelector('title').textContent;
-        document.querySelector('output').appendChild(rss);
-        })
-       } else {
-        console.log("Error in network request: " + req.statusText);
-       }
-    });
-
     document.getElementById("download").addEventListener("click", function(){  //download file
-        var filename = "test.txt";
+        var filename = obj.state + ".txt";
     
         download(filename, obj);
     }, false);

@@ -27,3 +27,16 @@
   background-color: #b53334;
   color: white;
 }
+
+div.video {
+    margin-right: 100px
+}
+
+fieldset {
+    background-color: #fb9a5d;
+}
+
+h1, h3, img, canvas, figcaption {
+    margin-left: 20px
+}
+

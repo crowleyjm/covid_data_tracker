@@ -19,9 +19,11 @@
     </div>
     <h1>COVID-19 Deaths</h1>
     <h3>Select by demographic</h3>
+    <h5>Data from Data.CDC.gov</h5>
     <form>
         <fieldset>
-            <label for="State">State:</label>
+            <br>
+            <label for="State"><b>&nbsp&nbsp&nbsp&nbsp&nbspState:</b></label>
             <select id="State" name="State">
                 <option value="United States">United States</option>
                 <option value="Alabama">Alabama</option>
@@ -77,13 +79,13 @@
                 <option value="Wyoming">Wyoming</option>
             </select>
             <b>&nbsp&nbsp&nbsp&nbsp&nbsp</b>
-            <label for="Sex">Sex:</label>
+            <label for="Sex"><b>Sex:</b></label>
             <select id="Sex" name="Sex">
                 <option value="Female">Female</option>
                 <option value="Male">Male</option>
             </select>
             <b>&nbsp&nbsp&nbsp&nbsp&nbsp</b>
-            <label for="Age">Age Group:</label>
+            <label for="Age"><b>Age Group:</b></label>
             <select id="Age" name="Age">
                 <option value="Under 1 year">Under 1 year</option>
                 <option value="1-4 years">1-4 years</option>
@@ -101,21 +103,21 @@
             <input type="submit" name="submit" id="inputSubmit">  <!-- submit -->
             <b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b>
             <input type="button" id="download" value="Submit selections to download data">
+            <br>
+            <br>
         </fieldset>
+        <br>
     </form>
-    <div>
-        <h3>Results</h3>
-    </div>
     <div id="Results">
         <!-- div for displaying results -->
         <div style="float:left">
-            <table>
+            <table class="table">
                 <!-- create table -->
-                <caption></caption>
+                <caption id="note"></caption>
                 <thead>
                     <!-- create header section -->
                     <tr>
-                        <th>
+                        <th ></th>
                         <th> COVID-19
                         <th> Influenza
                         <th> Pneumonia
@@ -140,17 +142,31 @@
                         <td colspan="1">End Week:</td> <!-- add footer -->
                         <td colspan="5" id="end"></td> <!-- add footer -->
             </table>
-            <p id="note" style="font-size:15px"></p>
-            <h5>Data from Data.CDC.gov</h5>
         </div>
         <div class="map" style="float:right; margin-right:50px">
-            <img src="wikimedia_Blank_US_Map_(states_only).svg" width:"500">
+            <img src="wikimedia_Blank_US_Map_(states_only).svg" style="width: 900px">
+            <figcaption class="figure-caption">https://commons.wikimedia.org/wiki/File:Blank_US_Map_(states_only).svg</figcaption>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div>
+            <iframe width="900" height="330"
+                    src="https://www.youtube.com/embed/5Vxf7ed3jBE">
+            </iframe>
         </div>
     </div>
-    <div id="rss"></div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="us.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="us.js"></script>
 </body>
 </html>

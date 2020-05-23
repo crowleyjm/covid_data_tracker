@@ -27,19 +27,30 @@
         <a href="resources.html">Resources</a>
     </div>
     <h1>COVID-19 Deaths</h1>
+    <h3>Totals by Country</h3>
+    <h5>Data from Johns Hopkins CSSE</h5>
     <form>
         <fieldset>
-            <label>Click to display current world results&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" name="submit" id="inputSubmit" , value="Load"></label> <!-- submit -->
+            <br>
+            <label><b>&nbsp&nbsp&nbsp&nbsp&nbspClick to display current world results</b>&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" name="submit" id="inputSubmit" , value="Load"></label> <!-- submit -->
             <b>&nbsp&nbsp&nbsp&nbsp&nbsp</b>
             <input type="button" id="download" value="Load results first to download">
+            <br>
+            <br>
         </fieldset>
     </form>
     <div>
         <br>
-        <img src="wikimedia_BlankMap-World.svg" style="width:1200px">
+        <img src="wikimedia_BlankMap-World.svg" style="width:1000px">
+        <div class="video" style="float:right;">
+            <iframe width="700" height="500" class="border border-secondary"
+                    src="https://www.youtube.com/embed/mOV1aBVYKGA">
+            </iframe>
+        </div>
+        <figcaption class="figure-caption">https://commons.wikimedia.org/wiki/File:BlankMap-World.svg</figcaption>
         <br>
         <br>
-        <canvas id="horizontalBar" style="max-width: 5000px; height: 10000px"></canvas>  <!-- for displaying results -->
+        <canvas id="horizontalBar" style="max-width: 80%; height: 10000px"></canvas>  <!-- for displaying results -->
         <br>
         <br>
     </div>

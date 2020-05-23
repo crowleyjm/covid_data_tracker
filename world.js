@@ -28,13 +28,13 @@ function bindButtons(){
         }
 
         //display results
-        document.getElementById("download").value = "Download data for world";
+        document.getElementById("download").value = "Download data for world" + " as of " + response.Date;
         new Chart(document.getElementById("horizontalBar"), {
         "type": "horizontalBar",
         "data": {
         "labels": loc,
         "datasets": [{
-        "label": "Total COVID-19 Deaths by Country as of " + response.Date,
+        "label": "Total COVID-19 Deaths by Country ", 
         "data": tot,
         "fill": false,
         "backgroundColor": colors,
@@ -43,10 +43,20 @@ function bindButtons(){
         }]
         },
         "options": {
+        "legend": { display: false },
+        "title": {
+        "display": true,
+        "text": "Total COVID-19 Deaths by Country as of " + response.Date,
+        "fontSize": 20
+        },
         "scales": {
         "xAxes": [{
-        "ticks": { 
+        "ticks": {"fontSize": 15,
         "beginAtZero": true
+        }
+        }],
+        "yAxes": [{
+        "ticks": {"fontSize": 20
         }
         }]
         }
@@ -57,7 +67,7 @@ function bindButtons(){
       }
 
    document.getElementById("download").addEventListener("click", function(){  //download file
-        var filename = "test.txt";
+        var filename = "world.txt";
     
        download(filename, response);
     }, false);

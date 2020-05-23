@@ -28,13 +28,10 @@
   color: white;
 }
 
-/*style table*/
-table, th, td { /* format table border */
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
+fieldset {
+    background-color: #fb9a5d;
 }
 
-fieldset {
-    background-color: #b53334;
+h1, h3, h5, table, iframe {
+    margin-left: 20px
 }
