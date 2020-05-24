@@ -1,4 +1,4 @@
-/*change styling!*/
+/*CS290 Project*/
 
 /* Add a black background color to the top navigation */
 .navMenu {
@@ -36,7 +36,7 @@ fieldset {
     background-color: #fb9a5d;
 }
 
-h1, h3, img, canvas, figcaption {
+h1, h3, h5, img, canvas, figcaption {
     margin-left: 20px
 }
 
