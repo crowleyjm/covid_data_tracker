@@ -2,10 +2,10 @@
 
 document.addEventListener("DOMContentLoaded", bindButtons);  // listener for DOM content loaded
 
+var obj = []
 function bindButtons(){
 
   document.getElementById("inputSubmit").addEventListener("click", function(event){  // listener for submit button click
-
     var req = new XMLHttpRequest();
     var inputState = document.getElementById("State").value;  // user input state
     var inputSex = document.getElementById("Sex").value;  // user input sex
@@ -20,7 +20,7 @@ function bindButtons(){
     req.addEventListener('load',function(){  // asynchronous load
       if(req.status >= 200 && req.status < 400){
         var response = JSON.parse(req.responseText)
-        var obj = response[response.length-1]
+        obj = response[response.length-1]
 
         // display current results in Bootstrap table
         // if footnote applies, display it and add "*" to appropriate cell in table
@@ -75,28 +75,27 @@ function bindButtons(){
       } else {
         console.log("Error in network request: " + req.statusText);
       }
-
-    // download text file
-    document.getElementById("download").addEventListener("click", function(){  
-        var filename = obj.state + ".txt";
-        download(filename, obj);
-    }, false);
-
     });
 
     req.send(null);  //send no additional info
     event.preventDefault();  //prevent refresh
-
   });
+}
 
-  function download(filename, text) { // function to download as text file
-    var element = document.createElement('a');
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(text)));
-    element.setAttribute('download', filename); // filename constructed based on state
+// download text file
+document.getElementById("download").addEventListener("click", function(){  
+  var filename = obj.state + "_" + obj.sex + "_" + obj.age_group + "_" + obj.data_as_of + ".txt";
+  console.log(filename);
+  download(filename, obj);
+},false);
 
-    element.style.display = 'none';
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
-  }
+
+function download(filename, text) { // function to download as text file
+  var element = document.createElement("a");
+  element.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(JSON.stringify(text)));
+  element.setAttribute("download", filename); // filename constructed based on selections
+  element.style.display = "none";
+  document.body.appendChild(element);
+  element.click();
+  document.body.removeChild(element);
 }

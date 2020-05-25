@@ -2,6 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", bindButtons);  // listener for DOM content loaded
 
+var response = []
 function bindButtons(){
 
   document.getElementById("inputSubmit").addEventListener("click", function(event){  // listener for submit button click
@@ -14,7 +15,7 @@ function bindButtons(){
 
     req.addEventListener('load',function(){  // asynchronous load
       if(req.status >= 200 && req.status < 400){
-        var response = JSON.parse(req.responseText);
+        response = JSON.parse(req.responseText);
         var countries = response.Countries;
 
         // sort countries by highest total death count
@@ -67,16 +68,17 @@ function bindButtons(){
       } else {
         console.log("Error in network request: " + req.statusText);
       }
-
-  document.getElementById("download").addEventListener("click", function(){  //download text file
-    var filename = "world.txt";
-    download(filename, response);
-    }, false);
     });
 
     req.send(null);  //send no additional info
     event.preventDefault();  //prevent refresh
   });
+}
+
+  document.getElementById("download").addEventListener("click", function(){  //download text file
+    var filename = "world.txt";
+    download(filename, response);
+    }, false);
 
   function download(filename, text) {  // function to download as text file
     var element = document.createElement('a');
@@ -87,7 +89,4 @@ function bindButtons(){
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
-  }
-}
-
-
+  };
