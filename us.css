@@ -1,13 +1,13 @@
-/*CS290 Project*/
+/* CS290 Project Subpage1 */
 
-/* Add a black background color to the top navigation */
-.navMenu {
+/* give navMenu black background */
+div.navMenu {
   background-color: #333;
   overflow: hidden;
 }
 
-/* Style the links inside the navigation bar */
-.navMenu a {
+/* give styles to links to other pages in navMenu */
+div.navMenu a {
   float: left;
   color: #f2f2f2;
   text-align: center;
@@ -16,22 +16,24 @@
   font-size: 17px;
 }
 
-/* Change the color of links on hover */
-.navMenu a:hover {
+/* make links orange on hover */
+div.navMenu a:hover {
   background-color: #fb9a5d;
   color: black;
 }
 
-/* Add a color to the active/current link */
-.navMenu a.active {
+/* make active link red */
+div.navMenu a.active {
   background-color: #b53334;
   color: white;
 }
 
+/* make fieldset orange */
 fieldset {
     background-color: #fb9a5d;
 }
 
+/* style margins */
 h1, h3, h5, table, iframe {
     margin-left: 20px
 }

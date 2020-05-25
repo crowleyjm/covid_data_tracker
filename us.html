@@ -1,4 +1,4 @@
-﻿<!-- CS290 Project -->
+﻿<!-- CS290 Project Subpage1-->
 
 <!DOCTYPE html>
 
@@ -6,13 +6,14 @@
 <head>
     <meta charset="utf-8" />
     <title>CS290 Project</title>
+    <!-- Bootstrap stylesheet -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="us.css" type="text/css">
 </head>
 <body>
     <!-- horizontal navigation menu -->
     <div class="navMenu">
-        <a href="home.html">Home</a>
+        <a href="index.html">Home</a>
         <a class="active" href="#us">United States</a>
         <a href="world.html">World</a>
         <a href="resources.html">Resources</a>
@@ -20,9 +21,11 @@
     <h1>COVID-19 Deaths</h1>
     <h3>Select by demographic</h3>
     <h5>Data from Data.CDC.gov</h5>
+    <!-- form that submits via GET -->
     <form>
         <fieldset>
             <br>
+            <!-- select state dropdown -->
             <label for="State"><b>&nbsp&nbsp&nbsp&nbsp&nbspState:</b></label>
             <select id="State" name="State">
                 <option value="United States">United States</option>
@@ -79,12 +82,14 @@
                 <option value="Wyoming">Wyoming</option>
             </select>
             <b>&nbsp&nbsp&nbsp&nbsp&nbsp</b>
+            <!-- select sex -->
             <label for="Sex"><b>Sex:</b></label>
             <select id="Sex" name="Sex">
                 <option value="Female">Female</option>
                 <option value="Male">Male</option>
             </select>
             <b>&nbsp&nbsp&nbsp&nbsp&nbsp</b>
+            <!-- select age group -->
             <label for="Age"><b>Age Group:</b></label>
             <select id="Age" name="Age">
                 <option value="Under 1 year">Under 1 year</option>
@@ -100,8 +105,10 @@
                 <option value="85 years and over">85 years and over</option>
             </select>
             <b>&nbsp&nbsp</b>
-            <input type="submit" name="submit" id="inputSubmit">  <!-- submit -->
+            <!-- submit selections-->
+            <input type="submit" name="submit" id="inputSubmit">
             <b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b>
+            <!-- button to download file -->
             <input type="button" id="download" value="Submit selections to download data">
             <br>
             <br>
@@ -109,15 +116,14 @@
         <br>
     </form>
     <div id="Results">
-        <!-- div for displaying results -->
         <div style="float:left">
             <table class="table">
-                <!-- create table -->
+                <!-- create table of results with caption of data footnote -->
                 <caption id="note"></caption>
                 <thead>
                     <!-- create header section -->
                     <tr>
-                        <th ></th>
+                        <th></th>
                         <th> COVID-19
                         <th> Influenza
                         <th> Pneumonia
@@ -125,7 +131,7 @@
                         <th> Pneumonia, Influenza, or COVID-19
                 <tbody>
                     <tr>
-                        <!-- create row of  -->
+                        <!-- create row of causes of death -->
                         <th> Deaths
                         <td id="c_death">
                         <td id="i_death">
@@ -143,6 +149,7 @@
                         <td colspan="5" id="end"></td> <!-- add footer -->
             </table>
         </div>
+        <!-- picture of United States map -->
         <div class="map" style="float:right; margin-right:50px">
             <img src="wikimedia_Blank_US_Map_(states_only).svg" style="width: 900px">
             <figcaption class="figure-caption">https://commons.wikimedia.org/wiki/File:Blank_US_Map_(states_only).svg</figcaption>
@@ -159,15 +166,17 @@
         <br>
         <br>
         <div>
+            <!-- CDC video -->
             <iframe width="900" height="330"
-                    src="https://www.youtube.com/embed/5Vxf7ed3jBE"> 
+                    src="https://www.youtube.com/embed/5Vxf7ed3jBE">
             </iframe>
             <figcaption class="figure-caption">&nbsp&nbsp&nbsp&nbsp&nbsphttps://www.cdc.gov/</figcaption>
         </div>
     </div>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-        <script src="us.js"></script>
+    <!-- Bootstrap and affiliated JQuery and Popper -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="us.js"></script>
 </body>
 </html>
