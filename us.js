@@ -60,8 +60,8 @@ function bindButtons(){
 		}
         
         document.getElementById("date").textContent = obj.data_as_of;
-        document.getElementById("start").textContent = obj.start_week;
-        document.getElementById("end").textContent = obj.end_week;
+        document.getElementById("start").textContent = obj.start_date;
+        document.getElementById("end").textContent = obj.end_date;
         document.getElementById("download").value = "Download selected data for " + obj.state;
 
         if (typeof obj.footnote !== "undefined" && (typeof obj.covid_19_deaths === "undefined" || 
