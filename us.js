@@ -8,12 +8,14 @@ function bindButtons(){
   document.getElementById("inputSubmit").addEventListener("click", function(event){  // listener for submit button click
     var req = new XMLHttpRequest();
     var inputState = document.getElementById("State").value;  // user input state
+    var inputYear = document.getElementById("Year").value;  // user input state
+    var inputMonth = document.getElementById("Month").value;  // user input state
     var inputSex = document.getElementById("Sex").value;  // user input sex
     var inputAge = document.getElementById("Age").value;  // user input age
     var appToken = "Fxcuw1MbpoA6KHvWEadazHzbU"; // app token from data.cdc.gov
 
     //construct url by state, sex, and age group
-    var queryUrl = "https://data.cdc.gov/resource/9bhg-hcku.json?" + "group=By Total" +"&state=" + inputState + "&sex=" + inputSex + "&age_group=" + inputAge + "&$$app_token=" + appToken;  
+    var queryUrl = "https://data.cdc.gov/resource/9bhg-hcku.json?" + "&state=" + inputState + "&year=" + inputYear + "&Month=" + inputMonth + "&sex=" + inputSex + "&age_group=" + inputAge + "&$$app_token=" + appToken;  
     
     req.open("GET", queryUrl, true);  // construct url for GET request
 
