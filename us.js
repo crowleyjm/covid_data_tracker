@@ -13,7 +13,7 @@ function bindButtons(){
     var appToken = "Fxcuw1MbpoA6KHvWEadazHzbU"; // app token from data.cdc.gov
 
     //construct url by state, sex, and age group
-    var queryUrl = "https://data.cdc.gov/resource/9bhg-hcku.json?" + "state=" + inputState + "&sex=" + inputSex + "&age_group=" + inputAge + "&$$app_token=" + appToken;  
+    var queryUrl = "https://data.cdc.gov/resource/9bhg-hcku.json?" + "group=By Total" +"&state=" + inputState + "&sex=" + inputSex + "&age_group=" + inputAge + "&$$app_token=" + appToken;  
     
     req.open("GET", queryUrl, true);  // construct url for GET request
 
