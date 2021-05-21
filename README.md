@@ -1,9 +1,9 @@
-#CS290 Project
+# CS290 Project
 
-##COVID Data Tracker
+## COVID Data Tracker
 
-######Basic JavaScript with select Bootstrap elements
+###### Basic JavaScript with select Bootstrap elements
 
-######REST API calls to retrieve data from Data.CDC.gov and Johns Hopkins CSSE
+###### REST API calls to retrieve data from Data.CDC.gov and Johns Hopkins CSSE
 
-######Deployed on Heroku: https://covid--data-tracker.herokuapp.com/
+###### Deployed on Heroku: https://covid--data-tracker.herokuapp.com/
